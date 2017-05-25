@@ -2,9 +2,38 @@
 <html>
   <head>
     <title>{{title}}</title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
+    {{!--<link rel='stylesheet' href='/stylesheets/style.css' />--}}
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- reset css -->
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css" />
+    <!-- moment.js for calender -->
+    <script src="assets/node_modules/moment/moment.js"></script>
+    <!-- underscore.js for calender -->
+    <script src="assets/node_modules/underscore/underscore-min.js"></script>
+    <!-- MATERIALIZE CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
+    <!-- icons for materialize -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- custom css -->
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+    <!-- custom css for calendar -->
+    <link rel="stylesheet" type="text/css" href="assets/css/calendar.css" />
+    <!-- font awesome for social media icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
   <body>
     {{{body}}}
+        <!-- compiled and minified jquery *must be before materialize.min.js -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous"></script>
+    <!-- clndr.js for calender -->
+    <script src="assets/node_modules/clndr/src/clndr.js"></script>
+    <script src="assets/js/calendar.js"></script>
+    <!-- materialize javascript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
+    <!-- external materialize javascript/jquery -->
+    <script type="text/javascript" src="assets/js/materialize.js"></script>
   </body>
 </html>

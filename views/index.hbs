@@ -1,2 +1,515 @@
-<h1>{{title}}</h1>
-<p>Welcome to {{title}}</p>
+<div id="content">
+        <!-- NAVAGATION BAR -->
+        <div class="navbar-fixed">
+            <nav class="indigo darken-3">
+                <div class="nav-wrapper">
+                    <a href="#" class="brand-logo">Riverview Raw Bar</a>
+                    <a href="#" data-activates="mobile-menu" class="button-collapse"><i class="material-icons">menu</i></a>
+
+                    <ul id="nav-mobile" class="right hide-on-med-and-down">
+                        <li><a href="home.html">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#menu">Menu</a></li>
+                        <li><a href="#events">Music &#38; Events</a></li>
+                        <li><a href="#discounts">Discounts</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="tel:+17044120181"><i class="material-icons">call</i></a></li>
+                    </ul>
+                    <ul class="side-nav" id="mobile-menu">
+                        <li><a href="home.html">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Menu</a></li>
+                        <li><a href="#">Music &#38; Events</a></li>
+                        <li><a href="#">Discounts</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="tel:+17044120181">Call Us!</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <!--START MAIN PAGE CONTENT -->
+
+        <!-- SLIDESHOW -->
+
+        <div class="slider">
+            <ul class="slides">
+                <li>
+                    <!-- logo image -->
+                    <img src="assets/imgs/img1.png"> 
+                </li>
+                <li>
+                    <img src="assets/imgs/img2.jpg">
+                    <div class="caption left-align">
+                        <h3>Left Aligned Caption</h3>
+                        <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+                    </div>
+                </li>
+                <li>
+                    <img src="assets/imgs/img3.jpg">
+                    <div class="caption right-align">
+                        <h3>Right Aligned Caption</h3>
+                        <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+                    </div>
+                </li>
+                <li>
+                    <img src="assets/imgs/img4.jpg">
+                    <div class="caption center-align">
+                        <h3>This is our big Tagline!</h3>
+                        <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <!-- ABOUT / STORY SECTION -->
+        <div class="container">
+            <div class="row" id="about">
+                <div class="col s12 m12 l12">
+                    <div class="section center-align">
+                        <h2 class="header"><br/>Riverview Raw Bar &#38; Chill</h2>
+                        <p class="caption">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam facilisis eleifend eleifend. Sed elementum sem sit amet
+                            orci interdum blandit. Pellentesque eros orci, eleifend sed justo vel, pharetra interdum dui.
+                            Vivamus blandit dignissim augue, ac ultricies orci fringilla in. Phasellus leo ipsum, ultricies
+                            eget malesuada sit amet, gravida ac tortor. Nam feugiat erat vel eros rhoncus, quis dapibus est
+                            suscipit. Phasellus eu interdum arcu, id elementum magna. Lorem ipsum dolor sit amet, consectetur
+                            adipiscing elit. Nullam imperdiet elit id imperdiet condimentum. Vivamus placerat dui elit, in
+                            scelerisque lorem accumsan tristique. Proin tincidunt orci sit amet erat dignissim, ac maximus
+                            dolor tristique. Cras est turpis, finibus eu rutrum et, interdum quis tellus.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="divider"></div>
+        <!-- MENU -->
+        <div class="container">
+            <div class="row">
+                <h2 class="center-align" id="menu">Menu</h2>
+            </div>
+            <div class="row">
+
+
+                <ul class="collapsible" data-collapsible="accordion">
+                    <!-- appetizers table -->
+                    <li>
+                        <div id="app" class="collapsible-header scrollspy">Appetizers</div>
+                        <div class="collapsible-body">
+                            <table class="centered striped">
+                                <thead>
+                                    <tr>
+                                        <th>Name</th>
+                                        <th>Item Description</th>
+                                        <th>Item Price</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <ul>
+                                        {{#each menu}}
+                                        {{#if this.appetizer}}
+                                        <tr>
+                                            <td>{{name}}</td>
+                                            <td class="description">{{description}}</td>
+                                            <td>${{price}}</td>
+                                        {{/if}}
+                                        {{/each}}
+                                        </tr>
+                                    </ul>
+                                </tbody>
+                            </table>
+                        </div>
+                    </li>
+                    <!-- oysters table -->
+                    <li>
+                        <div id="oys" class="collapsible-header scrollspy">Oysters</div>
+                        <div class="collapsible-body">
+                            <table class="centered striped">
+                                <thead>
+                                    <tr>
+                                        <th>Name</th>
+                                        <th>Item Description</th>
+                                        <th>Item Price</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <ul>
+                                        {{#each menu}}
+                                        {{#if this.oyster}}
+                                        <tr>
+                                            <td>{{name}}</td>
+                                            <td class="description">{{description}}</td>
+                                            <td>${{price}}</td>
+                                        {{/if}}
+                                        {{/each}}
+                                        </tr>
+                                    </ul>
+                                </tbody>
+                            </table>
+                        </div>
+                    </li>
+                    <!-- sides table -->
+                    <li>
+                        <div id="sides" class="collapsible-header scrollspy">Sides</div>
+                        <div class="collapsible-body">
+                            <table class="centered striped">
+                                <thead>
+                                    <tr>
+                                        <th>Name</th>
+                                        <th>Item Description</th>
+                                        <th>Item Price</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <ul>
+                                        {{#each menu}}
+                                        {{#if this.side}}
+                                        <tr>
+                                            <td>{{name}}</td>
+                                            <td class="description">{{description}}</td>
+                                            <td>${{price}}</td>
+                                        {{/if}}
+                                        {{/each}}
+                                        </tr>
+                                    </ul>
+                                </tbody>
+                            </table>
+                        </div>
+                    </li>
+                    <!-- wings table -->
+                    <li>
+                        <div id="wings" class="collapsible-header scrollspy">Wings</div>
+                        <div class="collapsible-body">
+                            <table class="centered striped">
+                                <thead>
+                                    <tr>
+                                        <th>Name</th>
+                                        <th>Item Description</th>
+                                        <th>Item Price</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <ul>
+                                        {{#each menu}}
+                                        {{#if this.wing}}
+                                        <tr>
+                                            <td>{{name}}</td>
+                                            <td class="description">{{description}}</td>
+                                            <td>${{price}}</td>
+                                        {{/if}}
+                                        {{/each}}
+                                        </tr>
+                                    </ul>
+                                </tbody>
+                            </table>
+                        </div>
+                    </li>
+                    <!-- sandwiches and burgers -->
+                    <li>
+                        <div id="burgers" class="collapsible-header scrollspy">Sandwiches &#38; Burgers</div>
+                        <div class="collapsible-body">
+                            <table class="centered striped">
+                                <thead>
+                                    <tr>
+                                        <th>Name</th>
+                                        <th>Item Description</th>
+                                        <th>Item Price</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <ul>
+                                        {{#each menu}}
+                                        {{#if this.sandwich}}
+                                        <tr>
+                                            <td>{{name}}</td>
+                                            <td class="description">{{description}}</td>
+                                            <td>${{price}}</td>
+                                        {{/if}}
+                                        {{/each}}
+                                        </tr>
+                                    </ul>
+                                </tbody>
+                            </table>
+                        </div>
+                    </li>
+                    <!-- salads -->
+                    <li>
+                        <div id="salads" class="collapsible-header scrollspy">Salads</div>
+                        <div class="collapsible-body">
+                            <table class="centered striped">
+                                <thead>
+                                    <tr>
+                                        <th>Name</th>
+                                        <th>Item Description</th>
+                                        <th>Item Price</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <ul>
+                                        {{#each menu}}
+                                        {{#if this.salad}}
+                                        <tr>
+                                            <td>{{name}}</td>
+                                            <td class="description">{{description}}</td>
+                                            <td>${{price}}</td>
+                                        {{/if}}
+                                        {{/each}}
+                                        </tr>
+                                    </ul>
+                                </tbody>
+                            </table>
+                        </div>
+                    </li>
+                    <!-- seafood platters -->
+                    <li>
+                        <div id="seafood" class="collapsible-header scrollspy">Seafood Platters</div>
+                        <div class="collapsible-body">
+                            <table class="centered striped">
+                                <thead>
+                                    <tr>
+                                        <th>Name</th>
+                                        <th>Item Description</th>
+                                        <th>Item Price</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <ul>
+                                        {{#each menu}}
+                                        {{#if this.platter}}
+                                        <tr>
+                                            <td>{{name}}</td>
+                                            <td class="description">{{description}}</td>
+                                            <td>${{price}}</td>
+                                        {{/if}}
+                                        {{/each}}
+                                        </tr>
+                                    </ul>
+                                </tbody>
+                            </table>
+                        </div>
+                    </li>
+                    <!-- tacos and quesadillas -->
+                    <li>
+                        <div id="tacos" class="collapsible-header scrollspy">Tacos &#38; Quesadillas</div>
+                        <div class="collapsible-body">
+                            <table class="centered striped">
+                                <thead>
+                                    <tr>
+                                        <th>Name</th>
+                                        <th>Item Description</th>
+                                        <th>Item Price</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <ul>
+                                        {{#each menu}}
+                                        {{#if this.taco}}
+                                        <tr>
+                                            <td>{{name}}</td>
+                                            <td class="description">{{description}}</td>
+                                            <td>${{price}}</td>
+                                        {{/if}}
+                                        {{/each}}
+                                        </tr>
+                                    </ul>
+                                </tbody>
+                            </table>
+                        </div>
+                    </li>
+                    <!-- entees -->
+                    <li>
+                        <div id="entrees" class="collapsible-header scrollspy">Entrees</div>
+                        <div class="collapsible-body">
+                            <table class="centered striped">
+                                <thead>
+                                    <tr>
+                                        <th>Name</th>
+                                        <th>Item Description</th>
+                                        <th>Item Price</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <ul>
+                                        {{#each menu}}
+                                        {{#if this.entree}}
+                                        <tr>
+                                            <td>{{name}}</td>
+                                            <td class="description">{{description}}</td>
+                                            <td>${{price}}</td>
+                                        {{/if}}
+                                        {{/each}}
+                                        </tr>
+                                    </ul>
+                                </tbody>
+                            </table>
+                        </div>
+                    </li>
+                    <!-- kids menu -->
+                    <li>
+                        <div id="kids-menu" class="collapsible-header scrollspy">For the Little Ones</div>
+                        <div class="collapsible-body">
+                            <table class="centered striped">
+                                <thead>
+                                    <tr>
+                                        <th>Name</th>
+                                        <th>Item Description</th>
+                                        <th>Item Price</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <ul>
+                                        {{#each menu}}
+                                        {{#if this.kids}}
+                                        <tr>
+                                            <td>{{name}}</td>
+                                            <td class="description">{{description}}</td>
+                                            <td>${{price}}</td>
+                                        {{/if}}
+                                        {{/each}}
+                                        </tr>
+                                    </ul>
+                                </tbody>
+                            </table>
+                        </div>
+                    </li>
+                    <!-- drinks -->
+                    <li>
+                        <div id="drinks" class="collapsible-header scrollspy">Drinks</div>
+                        <div class="collapsible-body">
+                            <table class="centered striped">
+                                <thead>
+                                    <tr>
+                                        <th>Name</th>
+                                        <th>Item Description</th>
+                                        <th>Item Price</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <ul>
+                                        {{#each menu}}
+                                        {{#if this.beverage}}
+                                        <tr>
+                                            <td>{{name}}</td>
+                                            <td class="description">{{description}}</td>
+                                            <td>${{price}}</td>
+                                        {{/if}}
+                                        {{/each}}
+                                        </tr>
+                                    </ul>
+                                </tbody>
+                            </table>
+                        </div>
+                    </li>
+                </ul>
+
+
+            </div>
+
+        </div>
+        <!-- end of menu container -->
+
+        <div class="divider"></div>
+
+
+        <!-- Calendar -->
+        <div class="row">
+            <h2 class="center-align" id="events">Music and Events</h2>
+        </div>
+
+        
+        <div class="container">
+            <div class="calendar">
+                <script type="text/template" id="#template-calendar">
+                    <div class="events-list"> <% _.each(eventsThisMonth, function(event) { %> <div class="event eventday" id="event-<%=moment(event.date).format('YYYY-MM-DD')%>"> <a href="<%= event.location %>"><%= moment(event.date).format('DD/MM') %> - <%= event.title %></a> </div> <% }); %> </div>
+                </script>
+            </div>
+        </div>
+
+        
+
+        <div class="divider"></div>
+        
+        <!-- Discount Card -->
+        <div class="row">
+            <h2 class="center-align" id="discounts">Discounts</h2>
+        </div>
+        <div class="row">
+            <div class="col l4 .hide-on-med-and-down">
+
+            </div>
+            <div class="col s12 l4 center-align">
+                <div class="card-panel teal">
+                    <span class="white-text">
+                        <h5>Want $20 off your next tab?</h5>
+                        <p><strong>text <span style="color:blue;">OYSTER</span> to 94253</strong></p>
+                    </span>
+                </div>
+            </div>
+            <div class="col l4 .hide-on-med-and-down">
+
+            </div>
+        </div>
+
+        <!-- FOOTER -->
+        <footer class="page-footer indigo accent-2">
+            <div class="container">
+                <div class="row">
+                    <div class="col l6 s12">
+                        <h5 class="white-text">Location</h5>
+                        <!--<a href="https://goo.gl/maps/8HF3EW8op6m"><p>10012 Moores Chapel Loop Charlotte, NC 28214</p></a>-->
+                        <!-- add google maps like the original website -->
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3258.3883844057514!2d-81.00714868530925!3d35.246592361294326!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8856bd43e84195d3%3A0xa0c52d835883ef04!2sRiverview+Raw+Bar+%26+Chill!5e0!3m2!1sen!2sus!4v1494428941210" width="400" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+                    </div>
+                    <div class="col l4 offset-l2 s12">
+                        <h5 class="white-text">Hours</h5>
+                        <ul class="collection">
+                            <li class="collection-item">
+                                <div>Sunday
+                                    <div class="secondary-content">4PM-10PM</div>
+                                </div>
+                            </li>
+                            <li class="collection-item">
+                                <div>Monday
+                                    <div class="secondary-content">CLOSED</div>
+                                </div>
+                            </li>
+                            <li class="collection-item">
+                                <div>Tuesday
+                                    <div class="secondary-content">4PM-10PM</div>
+                                </div>
+                            </li>
+                            <li class="collection-item">
+                                <div>Wednesday
+                                    <div class="secondary-content">4PM-10PM</div>
+                                </div>
+                            </li>
+                            <li class="collection-item">
+                                <div>Thursday
+                                    <div class="secondary-content">4PM-10PM</div>
+                                </div>
+                            </li>
+                            <li class="collection-item">
+                                <div>Friday
+                                    <div class="secondary-content">4PM-12AM</div>
+                                </div>
+                            </li>
+                            <li class="collection-item">
+                                <div>Saturday
+                                    <div class="secondary-content">4PM-12AM</div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-copyright indigo darken-2">
+                <span class="copyright"> © 2017 Copyright Text </span>
+                <div class="container">
+                    
+                    <div class="grey-text text-lighten-4 right"><a href="https://www.facebook.com/riverviewrawbar" target="_blank" class="fa fa-facebook"></a>
+<a href="https://twitter.com/riverviewrawbar" target="_blank" class="fa fa-twitter"></a></div>
+                </div>
+            </div>
+        </footer>
+
+    </div>
